@@ -16,7 +16,7 @@ public class MyAspect {
     }
     public Object around(ProceedingJoinPoint pjp) throws Throwable {
         System.out.println("环绕前增强...");
-        Object proceed = pjp.proceed();
+        Object proceed = pjp.proceed();//启动目标方法执行
         System.out.println("环绕后增强...");
         return proceed;
     }
